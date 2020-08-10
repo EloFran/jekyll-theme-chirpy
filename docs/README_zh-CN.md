@@ -95,13 +95,12 @@ $ bash tools/init.sh
 
 1. 从你的仓库中删除了:
     - `.travis.yml`
-    - `.github` 下的文件和目录
     - `_posts` 下的文件
     - `docs` 目录
 
-2. 配置了 GitHub Actions：把 `.github/workflows/` 的文件 `pages-deploy.yml.hook` 重命名为 `pages-deploy.yml`。
+2. 如果使用了参数 `--no-gh`，则会怒删 `.github`。否则，将会配置 GitHub Actions：把 `.github/workflows/pages-deploy.yml.hook` 的后缀 `.hook` 去除，然后删除 `.github` 里的其他目录和文件。
 
-3. 自动提交一个 Commit 以保存文件的更改。
+3. 自动提交一个 Commit 以保存上述文件的更改。
 
 ### 配置文件
 

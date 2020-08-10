@@ -91,11 +91,10 @@ What it does is:
 
 1. Remove some files or directories from your repository:
     - `.travis.yml`
-    - everything under `.github/`
-    - files under `_posts/`
-    - folder `docs/` 
+    - files under `_posts`
+    - folder `docs` 
 
-2. Unless the option `--no-gh` was enabled, setup the GitHub action workflow by renaming `pages-deploy.yml.hook` of directory `.github/workflows/` to `pages-deploy.yml`.
+2. If using the option `--no-gh`, the folder `.github` will be deleted. Otherwise, setup the GitHub Action workflow by removing extension `.hook` of `.github/workflows/pages-deploy.yml.hook`, and then remove the other files and directories in folder `.github`. 
 
 3. Automatically create a commit to save the changes.
 
